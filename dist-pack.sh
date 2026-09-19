@@ -4,7 +4,7 @@ set -e
 THIS_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 cd ${THIS_DIR}
-tar -czvf dist/content.tar.gz src/
+tar -czvf dist/content.tar.gz content/
 
 cd ${THIS_DIR}/dist
 split -b 16M content.tar.gz content_
