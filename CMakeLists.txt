@@ -1,5 +1,13 @@
 project(idk_content)
 
+execute_process(
+    COMMAND bash "${CMAKE_CURRENT_SOURCE_DIR}/dist-unpack.sh"
+    RESULT_VARIABLE SCRIPT_RETURN_CODE
+    OUTPUT_VARIABLE SCRIPT_OUTPUT
+    ERROR_VARIABLE SCRIPT_ERROR
+)
+
+
 install(
     DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/content"
     DESTINATION "${CMAKE_INSTALL_PREFIX}/"
